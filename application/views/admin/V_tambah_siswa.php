@@ -118,14 +118,13 @@
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 								<div class="col-sm-10 col-md-6">
-									<input type="file" name="image" class="form-control" >
+									<input type="file" name="image" class="form-control" required >
 								</div>
 							</div>
-						
+
 						<div class="form-group">
 							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                             <a href="v_siswa" class="btn btn-primary fa fa-reply-all">Back</a>
-								<!-- <button class="btn btn-primary" type="button"><i class="fa fa-times"></i>Back</button> -->
 								<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-save"></i>Save</button>
 								
 									

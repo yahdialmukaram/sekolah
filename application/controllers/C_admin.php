@@ -86,7 +86,6 @@ class C_admin extends CI_Controller {
                 $this->session->set_flashdata('success', 'data success in save');
    
                 redirect('c_admin/v_siswa');
-                
             }else {
                 $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
                 redirect('c_admin/tambah_siswa');

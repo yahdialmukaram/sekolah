@@ -107,7 +107,7 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/header');
         $this->load->view('admin/v_edit_siswa',$data);
         $this->load->view('admin/footer');
-        // print_r($data);
+        
 
     }
 

@@ -107,8 +107,26 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/v_edit_siswa',$data);
         $this->load->view('admin/footer');
         
-
     }
+
+    public function v_guru()
+    {
+        $data['tb_guru'] = $this->Model->tampil_guru();
+        
+        $this->load->view('admin/header');
+        $this->load->view('admin/v_guru',$data);
+        $this->load->view('admin/footer');
+    }
+
+    public function tambah_guru()
+    {
+
+        
+        $this->load->view('admin/header');
+        $this->load->view('admin/v_tambah_guru');
+        $this->load->view('admin/footer');
+    }
+
 
 }
 

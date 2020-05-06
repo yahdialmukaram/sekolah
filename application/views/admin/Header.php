@@ -344,6 +344,8 @@
         </li>
         <li class="active treview">
           <a href="<?= base_url();?>c_admin/v_siswa/"><i class="fa fa-book"></i> <span>Data Siswa</span>
+          <a href="<?= base_url();?>c_admin/v_guru/"><i class="fa fa-book"></i> <span>Data Guru</span>
+
           <!-- <a href="<?= base_url();?>c_admin/v_dokumentasi/"><i class="fa fa-book"></i> <span>Input Dokumentasi</span> -->
           <a href="<?= base_url();?>C_login">
             <i class="fa fa-power-off"></i> <span>Logout</span>

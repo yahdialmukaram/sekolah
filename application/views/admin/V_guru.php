@@ -6,8 +6,7 @@
 			Data Table Berita
 		</h1>
 		<br>
-		<a href="<?= base_url();?>c_admin/tambah_siswa" class="btn btn-primary fa fa-plus"> Tambah Data Siwa</a>
-		<!-- <a href="tambah_olahraga" class="btn btn-primary fa fa-plus"> Tambah Berita Olahraga</a> -->
+		<a href="<?= base_url();?>c_admin/tambah_guru" class="btn btn-primary fa fa-plus"> Tambah Data Guru</a>
 
 	</section>
 
@@ -37,45 +36,45 @@
 					<div class="box-body">
 						<table id="example2" class="table table-bordered table-hover wrap">
 							<thead>
-								<tr style="background-color: rgb(75, 120, 218); ">
+								<tr style="background-color: rgba(54, 71, 26, 0.336);">
 									<th>No</th>
-									<th>Nik</th>
-									<th>Nama</th>
-									<th>Alamat</th>
+									<th>Nip</th>
+                                    <th>Nama</th>
 									<th>Tanggal Lahir</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>No Hp</th>
-                                    <th>Agama</th>
+									<th>Pangkat/Gol</th>
+									<th>Pendidikan</th>
+									<th>Jabatan</th>
+                                    <th>Alamat</th>
+                                    <th>No Telepon</th>
+                                    <th>E-mail</th>
                                     <th>Image</th>
-                                    <th>Tanggal</th>
-									<th>Action</th>
+                                    <th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php
 								$no = 1;
-           					 foreach ($tb_siswa as $value): ?>
+           					 foreach ($tb_guru as $value): ?>
 								<tr>
 									<td><?= $no++ ?></td>
-                                    <td><?=$value['nik']; ?></td>
+                                    <td><?=$value['nip']; ?></td>
                                     <td><?=$value['nama']; ?></td>
+									<td><?=$value['tgl_lahir']; ?></td>
+                                    <td><?=$value['pangkat']; ?></td>
+                                    <td><?=$value['pendidikan']; ?></td>
+                                    <td><?=$value['jabatan']; ?></td>
                                     <td><?=$value['alamat']; ?></td>
-                                    <td><?=$value['tgl_lahir']; ?></td>
-                                    <td><?=$value['jenis_kelamin']; ?></td>
                                     <td><?=$value['no_hp']; ?></td>
-                                    <td><?=$value['agama']; ?></td>
+                                    <td><?=$value['email']; ?></td>
+                                    							
                                     <td><img style="width: 100px;height: 100px; border-radius:50%"
                                     src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
                                     
-                                    <td><?=$value['tanggal']; ?></td>
-									<td>
-										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>Edit </a>
-											<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-warning btn-xs"> <i class="fa fa-car"></i> Detils</a>
-										
-											<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-danger btn-xs"> <i class="fa fa-trash">Delete</i> </a>
+                                   <td>
+										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_guru']; ?>"
+											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>
+										<a href="<?php echo base_url(); ?>c_admin/delete_guru/<?php echo $value['id_guru']; ?>"
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> </a>
 									</td>
 								</tr>
 								<?php endforeach; ?>

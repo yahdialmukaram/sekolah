@@ -25,6 +25,12 @@ class Model extends CI_Model
         return $this->db->get('tb_siswa')->row_array();
         
     }
+    public function tampil_guru()
+    {
+
+      return  $this->db->get('tb_guru')->result_array();
+        
+    }
     
 }
 ?>

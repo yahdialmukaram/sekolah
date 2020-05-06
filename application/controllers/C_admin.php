@@ -31,8 +31,7 @@ class C_admin extends CI_Controller {
            $config['upload_path'] = './assets/images/'; //path folder
            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
            $config['encrypt_name'] = true; //nama yang terupload nantinya
-   
-           $this->upload->initialize($config);
+		   $this->load->library('upload', $config);
            if (!empty($_FILES[$name]['name'])) {
                if ($this->upload->do_upload($name)) {
                    $gbr = $this->upload->data();
@@ -59,8 +58,8 @@ class C_admin extends CI_Controller {
            } else {
                return $response['status'] = 'image not found';
            }
-       }
-   
+	   }
+
     public function save_siswa()
     {
         $agama =  $this->input->post('agama');

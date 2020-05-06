@@ -1,69 +1,132 @@
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
-		<h1>
-
-		</h1>
 
 	</section>
 
 	<!-- Main content -->
 	<section class="content">
 		<div class="row">
+			<!-- < column -->
 			<div class="col-md-12">
+				
+				<!-- Horizontal Form -->
 				<div class="box box-info">
-					<div class="box-header">
-						<h3 class="box-title"></h3>
-						<!-- <a href="C_admin/V_berita/" class="btn btn-primary">Back</a> -->
-						<div class="container">
-							<div class="col-md-8 col-md-offset-2">
-								<h3>Portal Berita</h3>
-								<hr />
-								<form action="<?php echo base_url();?>c_admin/update/<?=$edit['id'] ?>"
-									method="post" enctype="multipart/form-data">
-									<input type="text" name="judul" value="<?= $edit['nik']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
+					<div class="box-header with-border">
+						<h3 class="box-title">Edit Data Siswa</h3>
+		
+					</div>
+					<!-- <php echo validation_errors;?> -->
 
-										<input type="text" name="judul" value="<?= $edit['nama']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-										<input type="text" name="alamat" value="<?= $edit['alamat']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-										<input type="text" name="tgl_lahir" value="<?= $edit['tgl_lahir']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-										<input type="text" name="jenis_kelamin" value="<?= $edit['jenis_kelamin']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-										<input type="text" name="no_hp" value="<?= $edit['no_hp']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
+					<!-- form start -->
+					<?php if ($this->session->flashdata('error')):?>
+						<div class="alert alert-danger" role="alert">
+							<strong><?=$this->session->flashdata('error');
+							?></strong>
+						</div>
+					<?php endif;?>
+					<form class="form-horizontal" action="<?=base_url();?>C_admin/update_siswa/<?= $edit['id_siswa']?>" method="post" enctype="multipart/form-data" >
+						<div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Nik</label>
+								<div class="col-sm-10 col-md-6">
+									<input type="text" name="nik" value="<?= $edit['nik'];?>" class=" form-control">
+										
 
-										<input type="text" name="agama" value="<?= $edit['agama']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-										<input type="text" name="tanggal" value="<?= $edit['tanggal']; ?>" class="form-control"
-										placeholder="Judul berita" required /><br />
-								
-								
-
-									<input type="file" name="filefoto" value="<?= $edit['image'];?>" ><br>
-									<button class="btn btn-primary btn-btn-xs" type="submit">Simpan</button>
-								</form>
+								</div>
 							</div>
 						</div>
-						<!-- tools box -->
 
-					</div>
-					<!-- /.box -->
+						<div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Nama</label>
+								<div class="col-sm-10 col-md-6">
+									<input type="text" name="nama" value="<?= $edit['nama'];?>" class=" form-control">
+								</div>
+							</div>
+						</div>
 
 
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Tgl lahir</label>
+							<div class="col-sm-10 col-md-6">
+
+								<div class="input-group date">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" name="tgl_lahir" value="<?= $edit['tgl_lahir'];?>" class="form-control pull-right">
+								</div>
+							</div>
+						</div>
+
+					
+						<div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Jenis Kelamin</label>
+								<div class="col-sm-10 col-md-6">
+									<select name="jenis_kelamin" value="<?= $edit['jenis_kelamin'];?>" class="form-control"required id="agama">
+										<option value="0">--Pilih Jenis Kelamin--</option>
+										<option>Laki-Laki</option>
+										<option>Perempuan</option>
+									
+									</select>
+
+								</div>
+							</div>
+						</div>
+
+                        <div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Alamat</label>
+								<div class="col-sm-10 col-md-6">
+									<input type="text" name="alamat" value="<?= $edit['alamat'];?>" class=" form-control">
+								</div>
+							</div>
+						</div>
+					
+						<div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">No Hp</label>
+								<div class="col-sm-10 col-md-6">
+									<input type="text" name="no_hp" value="<?= $edit['no_hp'];?>" class=" form-control">
+								</div>
+                            </div>
+                            </div>
+                            <div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Agama</label>
+								<div class="col-sm-10 col-md-6">
+									<select name="agama" value="<?= $edit['agama'];?>" class="form-control"required id="agama">
+										<option value="0">--Pilih Agama--</option>
+										<option>Islam</option>
+										<option>Kristen</option>
+										<option>Khatolik</option>
+										<option>Hindu</option>
+										<option>Budha</option>
+									</select>
+
+								</div>
+							</div>
+						</div>
+                            <div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+								<div class="col-sm-10 col-md-6">
+									<input type="file" name="image"  value="<?=$edit['image'];?>" class="form-control">
+								</div>
+							</div>
+
+						<div class="form-group">
+							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                            <a href="<?= base_url();?>c_admin/v_siswa" class="btn btn-primary fa fa-reply-all">Back</a>
+								<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-save"></i>Update</button>
+								
+									
+							
+							</div>
+					</form>
 				</div>
-				<!-- /.col-->
 			</div>
-			<!-- ./row -->
 	</section>
-	<!-- /.content -->
 </div>
-<!-- /.content-wrapper -->

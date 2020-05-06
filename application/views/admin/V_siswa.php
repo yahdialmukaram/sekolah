@@ -69,9 +69,10 @@
                                     
                                     <td><?=$value['tanggal']; ?></td>
 									<td>
-										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_siswa']; ?>"
+										<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>Edit </a>
-											<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_siswa']; ?>"
+
+											<a href="<?php echo base_url(); ?>c_admin/edit_/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-warning btn-xs"> <i class="fa fa-car"></i> Detils</a>
 										
 											<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?php echo $value['id_siswa']; ?>"

@@ -106,8 +106,50 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/header');
         $this->load->view('admin/v_edit_siswa',$data);
         $this->load->view('admin/footer');
-        
+        // print_r($data);
     }
+
+    public function update_siswa($id)
+    {
+        $image = $this->upload('image');
+        if ($image['status'] =='success') {
+            $data = array(
+                'nik' =>$this->input->post('nik'),
+                'nama' =>$this->input->post('nama'),
+                'tgl_lahir' =>$this->input->post('tgl_lahir'),
+                'jenis_kelamin' =>$this->input->post('jenis_kelamin'),
+                'alamat' =>$this->input->post('alamat'),
+                'no_hp' =>$this->input->post('no_hp'),
+                'agama' =>$this->input->post('agama'),
+                'image' => $image['data'],
+                  );
+                  
+                  $this->Model->update_siswa($id,$data);
+                  $this->session->set_flashdata('success', 'Data success Update');
+                  redirect('c_admin/v_siswa');
+                  
+          
+        }else {
+            $data = array(
+                'nik' =>$this->input->post('nik'),
+                'nama' =>$this->input->post('nama'),
+                'tgl_lahir' =>$this->input->post('nik'),
+                'jenis_kelamin' =>$this->input->post('jenis_kelamin'),
+                'alamat' =>$this->input->post('alamat'),
+                'no_hp' =>$this->input->post('no_hp'),
+                'agama' =>$this->input->post('agama'),
+                'image' => $image['data'],
+                  );
+                  $this->Model->update_siswa($id,$data);
+                  $this->session->set_flashdata('error', 'Data success Update');
+                  redirect('c_admin/v_siswa');
+            
+        }
+    }
+        
+        
+        
+    
 
     public function v_guru()
     {

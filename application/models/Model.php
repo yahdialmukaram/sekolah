@@ -25,6 +25,16 @@ class Model extends CI_Model
         return $this->db->get('tb_siswa')->row_array();
         
     }
+
+    public function update_siswa($id,$data)
+    {
+        $this->db->where('id_siswa', $id);
+        $this->db->update('tb_siswa', $data);
+        
+        
+
+    }
+
     public function tampil_guru()
     {
 

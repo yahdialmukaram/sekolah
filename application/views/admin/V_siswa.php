@@ -43,11 +43,11 @@
 									<th>Nama</th>
 									<th>Alamat</th>
 									<th>Tanggal Lahir</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>No Hp</th>
-                                    <th>Agama</th>
-                                    <th>Image</th>
-                                    <th>Tanggal</th>
+									<th>Jenis Kelamin</th>
+									<th>No Hp</th>
+									<th>Agama</th>
+									<th>Image</th>
+									<th>Tanggal</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -57,25 +57,24 @@
            					 foreach ($tb_siswa as $value): ?>
 								<tr>
 									<td><?= $no++ ?></td>
-                                    <td><?=$value['nik']; ?></td>
-                                    <td><?=$value['nama']; ?></td>
-                                    <td><?=$value['alamat']; ?></td>
-                                    <td><?=$value['tgl_lahir']; ?></td>
-                                    <td><?=$value['jenis_kelamin']; ?></td>
-                                    <td><?=$value['no_hp']; ?></td>
-                                    <td><?=$value['agama']; ?></td>
-                                    <td><img style="width: 100px;height: 100px; border-radius:50%"
-                                    src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
-                                    
-                                    <td><?=$value['tanggal']; ?></td>
+									<td><?=$value['nik']; ?></td>
+									<td><?=$value['nama']; ?></td>
+									<td><?=$value['alamat']; ?></td>
+									<td><?=$value['tgl_lahir']; ?></td>
+									<td><?=$value['jenis_kelamin']; ?></td>
+									<td><?=$value['no_hp']; ?></td>
+									<td><?=$value['agama']; ?></td>
+									<td><img style="width: 100px;height: 100px; border-radius:50%"
+											src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
+
+									<td><?=$value['tanggal']; ?></td>
 									<td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>Edit </a>
 
-											<a href="<?php echo base_url(); ?>c_admin/edit_/<?php echo $value['id_siswa']; ?>"
-											class="btn btn-warning btn-xs"> <i class="fa fa-car"></i> Detils</a>
-										
-											<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?php echo $value['id_siswa']; ?>"
+										<a href="<?php echo base_url(); ?>c_admin/details_siswa/<?php echo $value['id_siswa']; ?>"	class="btn btn-warning btn-xs"> <i class="fa fa-search-plus"></i> Detils</a>
+						
+										<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-danger btn-xs"> <i class="fa fa-trash">Delete</i> </a>
 									</td>
 								</tr>

@@ -13,6 +13,8 @@ class C_admin extends CI_Controller {
     }
     public function v_siswa()
     {
+        // $data['details'] = $this->Model->details_siswa();
+
         $data['tb_siswa'] = $this->Model->tampil_siswa();
         
         $this->load->view('admin/header');
@@ -123,7 +125,7 @@ class C_admin extends CI_Controller {
                 'agama' =>$this->input->post('agama'),
                 'image' => $image['data'],
                   );
-                  
+
                   $this->Model->update_siswa($id,$data);
                   $this->session->set_flashdata('success', 'Data success Update');
                   redirect('c_admin/v_siswa');
@@ -138,7 +140,7 @@ class C_admin extends CI_Controller {
                 'alamat' =>$this->input->post('alamat'),
                 'no_hp' =>$this->input->post('no_hp'),
                 'agama' =>$this->input->post('agama'),
-                'image' => $image['data'],
+                // 'image' => $image['data'],
                   );
                   $this->Model->update_siswa($id,$data);
                   $this->session->set_flashdata('error', 'Data success Update');
@@ -146,11 +148,17 @@ class C_admin extends CI_Controller {
             
         }
     }
-        
-        
-        
-    
 
+    public function details_siswa($id)
+    {
+        $data['details'] = $this->Model->details_siswa($id);
+        
+        $this->load->view('admin/header');
+        $this->load->view('admin/details_siswa',$data);
+        $this->load->view('admin/footer');
+        
+    }
+        
     public function v_guru()
     {
         $data['tb_guru'] = $this->Model->tampil_guru();
@@ -163,7 +171,6 @@ class C_admin extends CI_Controller {
     public function tambah_guru()
     {
 
-        
         $this->load->view('admin/header');
         $this->load->view('admin/v_tambah_guru');
         $this->load->view('admin/footer');

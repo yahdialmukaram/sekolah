@@ -113,7 +113,7 @@
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 								<div class="col-sm-10 col-md-6">
-									<input type="file" name="image"  value="<?=$edit['image'];?>" class="form-control">
+									<input type="file" name="image" value="<?=$edit['image'];?>" class="form-control">
 								</div>
 							</div>
 

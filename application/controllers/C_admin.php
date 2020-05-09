@@ -64,6 +64,17 @@ class C_admin extends CI_Controller {
 
     public function save_siswa()
     {
+        // input nik tidak boleh sama
+        $nik = $this->input->post('nik');
+        $sql = $this->db->query("select nik from tb_siswa where nik='$nik'");
+        $cek_nik = $sql->num_rows();
+        if ($cek_nik > 0 ) {
+            $this->session->set_flashdata('error', 'data nik sudah ada');
+            
+            redirect('c_admin/tambah_siswa');
+        }
+        
+
         $agama =  $this->input->post('agama');
         if ($agama == '0')
         {
@@ -168,12 +179,57 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
-    public function tambah_guru()
+    public function V_tambah_guru()
     {
 
         $this->load->view('admin/header');
         $this->load->view('admin/v_tambah_guru');
         $this->load->view('admin/footer');
+    }
+
+    public function save_guru()
+    {
+        $pendidikan = $this->input->post('pendidikan');
+       if ($pendidikan == '0') {
+        $this->session->set_flashdata('error', 'pendidikan wajib di isi');
+        
+        redirect('c_admin/v_tambah_guru');
+       } 
+       $image = $this->upload('image');
+       if ($image['status'] =='success')
+        {
+          $data = array(
+              'nip' => $this->input->post('nip'),
+              'nama' => $this->input->post('nama'),
+              'tgl_lahir' => $this->input->post('tgl_lahir'),
+              'pangkat' => $this->input->post('pangkat'),
+              'pendidikan' => $this->input->post('pendidikan'),
+              'jabatan' => $this->input->post('jabatan'),
+              'alamat' => $this->input->post('alamat'),
+              'no_hp' => $this->input->post('no_hp'),
+              'email' => $this->input->post('email'),
+              'image' => $image['data'],
+          );
+          $this->Model->save_guru($data);
+          $this->session->set_flashdata('success', 'data berhasil save');
+          
+          redirect('c_admin/v_guru');
+          
+       }else {
+        $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
+        redirect('c_admin/v_tambah_guru');
+    }
+       
+
+        
+    }
+    public function delete_guru($id)
+    {
+        $this->Model->delete_guru($id);
+        $this->session->set_flashdata('danger', 'resident data successfully deleted');
+        
+        redirect('c_admin/v_guru');        
+        
     }
 
 

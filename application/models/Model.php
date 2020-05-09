@@ -44,6 +44,18 @@ class Model extends CI_Model
       return  $this->db->get('tb_guru')->result_array();
         
     }
+    public function save_guru($data)
+    {
+        $this->db->insert('tb_guru', $data);
+
+    }
+    public function delete_guru($id)
+    {
+        $this->db->where('id_guru', $id);        
+        $this->db->delete('tb_guru');
+
+        
+    }
     
 }
 ?>

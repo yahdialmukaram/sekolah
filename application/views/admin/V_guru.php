@@ -6,7 +6,7 @@
 			Data Table Berita
 		</h1>
 		<br>
-		<a href="<?= base_url();?>c_admin/tambah_guru" class="btn btn-primary fa fa-plus"> Tambah Data Guru</a>
+		<a href="<?= base_url();?>c_admin/v_tambah_guru" class="btn btn-primary fa fa-plus"> Tambah Data Guru</a>
 
 	</section>
 

@@ -28,10 +28,10 @@
 					<form class="form-horizontal" action="<?=base_url();?>C_admin/save_guru" method="post" enctype="multipart/form-data" >
 						<div class="box-body">
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-2 control-label">Nik</label>
+								<label for="inputEmail3" class="col-sm-2 control-label">Nip</label>
 								<div class="col-sm-10 col-md-6">
-									<input type="text" name="nik" class=" form-control" required id="inputEmail3"
-										placeholder="Nik">
+									<input type="text" name="nip" class=" form-control" required id="inputEmail3"
+										placeholder="Nip">
 										
 
 								</div>
@@ -88,8 +88,25 @@
 								</div>
 							</div>
 						</div>
-					
-						<div class="box-body">
+				
+						     <div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Pendidilkan</label>
+								<div class="col-sm-10 col-md-6">
+									<select name="pendidikan" class="form-control"required id="pendidikan">
+										<option value="0">--Pilih Pendidikan--</option>
+										<option>Sma Sederajat</option>
+										<option>D3 Diploma</option>
+										<option>S1</option>
+										<option>S2</option>
+										<option>S3</option>
+									</select>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="box-body">
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Pendidikan</label>
 								<div class="col-sm-10 col-md-6">
@@ -97,7 +114,7 @@
 										placeholder="Input Pendidikan">
 								</div>
                             </div>
-                            </div>
+                            </div> -->
                             </div>
 							</div>
 

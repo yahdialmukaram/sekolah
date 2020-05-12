@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kiddos - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Beranda</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -48,15 +48,15 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-center">
-	    	<a class="navbar-brand" href="index.html">Kiddos</a>
+	    <marquee>	<a class="navbar-brand" href="<?=base_url();?>c_user">Selamat Datang di SD 02 Pasar Malalo </a></marquee>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="<?= base_url();?>c_user" class="nav-link pl-0">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
+	        	<li class="nav-item"><a href="c_user/teacher/" class="nav-link">Guru</a></li>
 	        	<li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
 	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>

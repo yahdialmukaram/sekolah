@@ -3,7 +3,7 @@
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<h1>
-			Data Table Berita
+			Data Table Siswa
 		</h1>
 		<br>
 		<a href="<?= base_url();?>c_admin/tambah_siswa" class="btn btn-primary fa fa-plus"> Tambah Data Siwa</a>
@@ -72,7 +72,7 @@
 										<a href="<?php echo base_url(); ?>c_admin/edit_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>Edit </a>
 
-										<a href="<?php echo base_url(); ?>c_admin/details_siswa/<?php echo $value['id_siswa']; ?>"	class="btn btn-warning btn-xs"> <i class="fa fa-search-plus"></i> Detils</a>
+										<a href="<?php echo base_url(); ?>c_admin/details_siswa/<?php echo $value['id_siswa']; ?>"	class="btn btn-warning btn-xs"> <i class="fa fa-search-plus"></i> Details</a>
 						
 										<a href="<?php echo base_url(); ?>c_admin/delete_siswa/<?php echo $value['id_siswa']; ?>"
 											class="btn btn-danger btn-xs"> <i class="fa fa-trash">Delete</i> </a>

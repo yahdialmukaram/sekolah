@@ -8,7 +8,7 @@
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 text-center ftco-animate">
             <h1 class="mb-4">Kids Are The Best <span>Explorers In The World</span></h1>
-			<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p> -->
+			<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Read More</a></p>
 			<img src="<?= base_url();?>template/template/images/bg_1.jpg" alt="...">
           </div>
         </div>

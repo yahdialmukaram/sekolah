@@ -5,6 +5,7 @@
 		<h1>
 			Data Table Siswa
 		</h1>
+	
 		<br>
 		<a href="<?= base_url();?>c_admin/tambah_siswa" class="btn btn-primary fa fa-plus"> Tambah Data Siwa</a>
 		<!-- <a href="tambah_olahraga" class="btn btn-primary fa fa-plus"> Tambah Berita Olahraga</a> -->
@@ -41,12 +42,12 @@
 									<th>No</th>
 									<th>Nik</th>
 									<th>Nama</th>
+									<th>Image</th>
 									<th>Alamat</th>
 									<th>Tanggal Lahir</th>
 									<th>Jenis Kelamin</th>
 									<th>No Hp</th>
 									<th>Agama</th>
-									<th>Image</th>
 									<th>Tanggal</th>
 									<th>Action</th>
 								</tr>
@@ -59,13 +60,13 @@
 									<td><?= $no++ ?></td>
 									<td><?=$value['nik']; ?></td>
 									<td><?=$value['nama']; ?></td>
+									<td><img style="width: 100px;height: 100px; border-radius:50%"
+											src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
 									<td><?=$value['alamat']; ?></td>
 									<td><?=$value['tgl_lahir']; ?></td>
 									<td><?=$value['jenis_kelamin']; ?></td>
 									<td><?=$value['no_hp']; ?></td>
 									<td><?=$value['agama']; ?></td>
-									<td><img style="width: 100px;height: 100px; border-radius:50%"
-											src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
 
 									<td><?=$value['tanggal']; ?></td>
 									<td>

@@ -3,6 +3,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_admin extends CI_Controller {
+     public function __construct()
+    {
+        parent::__construct();
+     
+        date_default_timezone_set('Asia/Jakarta');
+
+    }
 
     public function index()
     {
@@ -81,6 +88,14 @@ class C_admin extends CI_Controller {
             $this->session->set_flashdata('error', 'Anda belum memilih agama');
             redirect('c_admin/tambah_siswa');
         }
+
+        $jk = $this->input->post('jenis_kelamin');
+        if ($jk=='0') 
+        {
+        $this->session->set_flashdata('error','Jenis kelamin wajib di isi');
+        redirect('c_admin/tambah_siswa');
+        
+    }
         $image = $this->upload('image');
         if ($image['status'] == 'success'){
             $data = array(

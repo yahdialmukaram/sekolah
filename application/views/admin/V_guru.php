@@ -40,6 +40,7 @@
 									<th>No</th>
 									<th>Nip</th>
                                     <th>Nama</th>
+                                    <th>Image</th>
 									<th>Tanggal Lahir</th>
 									<th>Pangkat/Gol</th>
 									<th>Pendidikan</th>
@@ -47,7 +48,6 @@
                                     <th>Alamat</th>
                                     <th>No Telepon</th>
                                     <th>E-mail</th>
-                                    <th>Image</th>
                                     <th>Action</th>
 								</tr>
 							</thead>
@@ -59,6 +59,9 @@
 									<td><?= $no++ ?></td>
                                     <td><?=$value['nip']; ?></td>
                                     <td><?=$value['nama']; ?></td>
+                                    <td><img style="width: 100px;height: 100px; border-radius:50%"
+                                    src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
+                                    
 									<td><?=$value['tgl_lahir']; ?></td>
                                     <td><?=$value['pangkat']; ?></td>
                                     <td><?=$value['pendidikan']; ?></td>
@@ -67,9 +70,6 @@
                                     <td><?=$value['no_hp']; ?></td>
                                     <td><?=$value['email']; ?></td>
                                     							
-                                    <td><img style="width: 100px;height: 100px; border-radius:50%"
-                                    src="<?=base_url();?>assets/images/<?=$value['image'];?>"></td>
-                                    
                                    <td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id_guru']; ?>"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>

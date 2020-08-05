@@ -243,14 +243,14 @@ window.setTimeout(function(){
 }, 6000);
 </script>
 
-
+<!-- 
 <script>
   $(function () {
    
     CKEDITOR.replace('ckeditor')
   
   })
-</script>
+</script> -->
 
 </body>
 </html>
